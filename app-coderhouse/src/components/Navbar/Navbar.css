@@ -6,9 +6,7 @@
     padding: 20px 30px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: #242323;
-    border-radius: 15px;
+    justify-content: space-between;
 }
 
 .navbar div ul {
@@ -22,10 +20,10 @@
 }
 
 .navbar div ul li a {
-    color: #c0c0c0;
+    color: black;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-family: 'Dosis', serif;
     margin-left: 30px;
 }
 
