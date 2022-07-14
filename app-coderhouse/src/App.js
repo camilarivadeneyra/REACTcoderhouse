@@ -1,13 +1,15 @@
 import logo from './terra.png';
 import './App.css' ;
 import Navbar from './components/Navbar/Navbar';
+import ItemListContainer from './components/Navbar/ItemListContainer/ItemListContainer';
+
 
 function App () {
   return (
     <div className = "App">
       <header className = "App-header">
         <Navbar/>
-        <h6>Cosmetica Natural.</h6>
+        <ItemListContainer greeting = "BIENVENIDOS A TERRA !" />
       </header>
     </div>
   )
