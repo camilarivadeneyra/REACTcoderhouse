@@ -1,19 +1,20 @@
+import logoTerra from './terra.png';
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = () =>{
     return (
-        <nav className='Navbar'>
+        <nav className='navbar'>
             <div>
-                T E R R A
+                <a><img src={logoTerra} className='logoTerra' alt='logo Terra'/></a>
             </div>
             <div>
-                <ul><li>PRODUCTOS</li></ul>
+                <ul>
+                    <li><a>PRODUCTOS.</a></li>
+                </ul>
             </div>
         </nav>
     )
 }
 
-export default Navbar
-
-
+export default Navbar;
 
