@@ -3,7 +3,7 @@ import './Counter.css';
 
 
 const Counter = ({stock, initial, onAdd}) => {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(initial);
 
 
     const decrement = () => {
@@ -21,7 +21,7 @@ const Counter = ({stock, initial, onAdd}) => {
             <div className="countBtn">
                 <button
                     onClick={decrement}
-                    disabled={count === initial ? true : null}
+                    disabled={count === 0 ? true : null}
                 > - </button>
                 <button
                     onClick={increment}
@@ -30,7 +30,7 @@ const Counter = ({stock, initial, onAdd}) => {
             </div>
             <button className="countBtnAdd"
                 onClick={() => onAdd(count)}
-                disabled={count === initial ? true : null}
+                disabled={stock === 0 || count === 0 ? true : null}
             > AGREGAR PRODUCTO</button>
         </div>
     )
