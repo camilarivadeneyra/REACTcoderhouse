@@ -13,16 +13,16 @@
     display:inline-block;
 }
 
-.navbar div ul li {
+.navbar div button {
     list-style: none;
     float:left;
     cursor: pointer;
 }
 
-.navbar div ul li a {
+.navbar div button{
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Dosis', serif;
     margin-left: 30px;
 }

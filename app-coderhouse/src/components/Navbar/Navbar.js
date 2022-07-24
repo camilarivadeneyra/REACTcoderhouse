@@ -1,6 +1,7 @@
 import logoTerra from './terra.png';
 import './Navbar.css'
 import CartWidget from './CartWidget/CartWidget';
+import Button from './Button/Button';
 
 const Navbar = () =>{
     return (
@@ -9,9 +10,7 @@ const Navbar = () =>{
                 <a><img src={logoTerra} className='logoTerra' alt='logo Terra'/></a>
             </div>
             <div>
-                <ul>
-                    <li><a>PRODUCTOS.</a></li>
-                </ul>
+                <Button label="PRODUCTOS" />
             </div>
             <div>
                 <CartWidget />
