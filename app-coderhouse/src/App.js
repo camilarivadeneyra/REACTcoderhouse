@@ -1,23 +1,21 @@
-import logo from './terra.png';
-import './App.css' ;
+import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import ItemListContainer from './components/Navbar/ItemListContainer/ItemListContainer';
-import Counter from './components/Navbar/Counter/Counter';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
-
-
-function App () {
-
+const ItemDetailContainer = () => {
   return (
-    <div className = "App">
-      <header className = "App-header">
-        <Navbar/>
-        <ItemListContainer greeting = "BIENVENIDOS A TERRA !" />
-        <Counter />
-      </header>
-    </div>
+    <h2>DETAIL</h2>
   )
 }
 
+function App() {
+  return (
+    <div className="App">
+      <Navbar />
+      <ItemListContainer greeting={'SOMOS LO QUE NOS MUEVE A SER PARTE DEL CAMBIO'} />
+      <ItemDetailContainer />
+    </div>
+  )
+}
 
 export default App;

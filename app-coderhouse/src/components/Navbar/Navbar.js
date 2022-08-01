@@ -1,7 +1,7 @@
 import logoTerra from './terra.png';
 import './Navbar.css'
-import CartWidget from './CartWidget/CartWidget';
-import Button from './Button/Button';
+import CartWidget from '../CartWidget/CartWidget';
+import Button from '../Button/Button';
 
 const Navbar = () =>{
     return (
@@ -10,7 +10,9 @@ const Navbar = () =>{
                 <a><img src={logoTerra} className='logoTerra' alt='logo Terra'/></a>
             </div>
             <div>
-                <Button label="PRODUCTOS" />
+                <Button label="AROMATERAPIA" />
+                <Button label="CUIDADO CORPORAL" />
+                <Button label="CUIDADO CAPILAR" />
             </div>
             <div>
                 <CartWidget />
@@ -20,4 +22,3 @@ const Navbar = () =>{
 }
 
 export default Navbar;
-
