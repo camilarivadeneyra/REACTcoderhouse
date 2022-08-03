@@ -6,9 +6,9 @@ const Item = ({id, name,img, price}) => {
             <header>
                 <h2>{name}</h2>
             </header>
-            {/* <picture>
+            <picture>
                 <img src={img} alt={name}/>
-            </picture> */}
+            </picture>
             <section>
                 <p>
                     Precio: ${price}
