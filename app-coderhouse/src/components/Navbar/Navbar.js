@@ -1,24 +1,21 @@
-import logoTerra from './terra.png';
 import './Navbar.css'
-import CartWidget from '../CartWidget/CartWidget';
-import Button from '../Button/Button';
+import { Link } from 'react-router-dom'
 
-const Navbar = () =>{
+const Navbar = () => {
     return (
-        <nav className='navbar'>
+        <nav className="Navbar">
             <div>
-                <a><img src={logoTerra} className='logoTerra' alt='logo Terra'/></a>
+                <h4>T E R R A</h4>
             </div>
-            <div>
-                <Button label="AROMATERAPIA" />
-                <Button label="CUIDADO CORPORAL" />
-                <Button label="CUIDADO CAPILAR" />
-            </div>
-            <div>
-                <CartWidget />
+            <div className="Categories" >
+                <Link to={`/category/aromaterapia`} >AROMATERAPIA</Link>
+                <Link to={`/category/cuidadocapilar`}>CUIDADO CAPILAR</Link>
+                <Link to={`/category/cuidadocorporal`}>CUIDADO PERSONAL</Link>
             </div>
         </nav>
     )
 }
 
 export default Navbar;
+
+
