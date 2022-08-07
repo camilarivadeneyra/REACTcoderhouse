@@ -1,21 +1,26 @@
+import './Item.css'
 import { Link } from 'react-router-dom'
 
-const Item = ({id, name,img, price}) => {
+const Item = ({ id, name, img, price }) => {
+
+    const handleClick = (e) => {
+        e.stopPropagation()
+        console.log('clickear')
+    }
+
     return (
-        <article>
-            <header>
-                <h2>{name}</h2>
+        <article onClick={ handleClick }>
+            <header className="Header">
+                <h3 className="ItemHeader"> {name} </h3>
             </header>
             <picture>
-                <img src={img} alt={name}/>
+                <img src= {img} alt= {name}/>
             </picture>
             <section>
-                <p>
-                    Precio: ${price}
-                </p>
-            </section>
+                <p className="Info"> Precio: ${price} </p>
+            </section>           
             <footer>
-                <Link to={`/detail/${id}`}>Ver detalle</Link>
+                <Link to={`/detail/${id}`} >VER DETALLE</Link>
             </footer>
         </article>
     )

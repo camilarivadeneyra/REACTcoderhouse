@@ -1,11 +1,16 @@
 import './ItemList.css'
 import Item from '../Item/Item'
 
-const ItemList = ({ products }) => {
-    return (
-        <div className='ItemList'>
-            {products.map(prod => <Item key={prod.id} {...prod}/>)}
-        </div>
+const ItemList = ({products }) => {
+
+    const handleClick = () => {
+        console.log('click ItemList')
+    }
+
+    return(
+        <div onClick={handleClick}>
+            {products.map(prod => <Item key={prod.id} {...prod} />)}
+        </div>    
     )
 }
 
