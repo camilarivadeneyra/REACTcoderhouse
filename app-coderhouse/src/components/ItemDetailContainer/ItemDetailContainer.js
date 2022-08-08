@@ -1,81 +1,34 @@
+import './ItemDetailContainer.css'
 import { useState, useEffect } from 'react'
-import { getProductById, getProducts } from "../../asyncMock"
+import { getProductById } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 
-const InputCount = ({onConfirm, stock, initial= 1}) => {
-    const [count, setCount] = useState(initial)
 
-    const handleChange = (e) => {
-        if(e.target.value <= stock) {
-            setCount(e.target.value)
-        }
-    }
-
-    return (
-        <div>
-            <input type='number' onChange= {handleChange} value= {count} />
-            <button onClick={() => onConfirm(count)} >AGREGAR AL CARRITO</button>
-        </div>
-    )
-}
-
-const ButtonCount = ({ onConfirm, stock, initial = 1 }) => {
-    const [count, setCount] = useState (initial)
-
-    const increment = () => {
-        if(count < stock) {
-            setCount (count + 1)
-        }
-    }
-
-    const decrement = () => {
-        setCount (count - 1)
-    }
-
-    return (
-        <div>
-            <p>{count}</p>
-            <button onClick= {decrement}>-</button>
-            <button onClick= {increment}>+</button>
-            <button onClick= {() => onConfirm(count)}>AGREGAR PRODUCTO</button>
-        </div>
-    )
-
-}
-
-
-
-
-const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({})
-
+const ItemDetailContainer = ({ addItem }) => {
+    const [product, setProduct] = useState()
+    const [loading, setLoading] = useState(true)
     const { productId } = useParams()
+
 
     useEffect(() => {
         getProductById(productId).then(response => {
             setProduct(response)
+        }).finally(() => {
+            setLoading(false)
         })
     }, [productId])
 
-    return (
+    if(loading) {
+        return <h5>CARGANDO PRODUCTOS</h5>
+    }
+
+    return(
         <div>
-            <ItemDetail {...product} />
+            <ItemDetail {...product} addItem={addItem}/>
         </div>
     )
 }
 
+
 export default ItemDetailContainer
-
-
-
-
-
-
-
-
-
-
-
-
-
