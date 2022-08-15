@@ -11,7 +11,7 @@ const Notification = ({ message, severity, classes }) => {
         height: 'auto',
         padding: '8px 18px 8px 18px',
         color: 'black',
-        backgroundColor: severity === 'success' ? 'white' : 'grey'
+        backgroundColor: severity === 'success' ? 'green' : 'red'
     }
 
 
