@@ -1,34 +1,37 @@
-import './ItemDetailContainer.css'
-import { useState, useEffect } from 'react'
-import { getProductById } from '../../asyncMock'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import { getProductById } from "../../asyncMock";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from 'react-router-dom';
 
 
-const ItemDetailContainer = ({ addItem }) => {
+const ItemDetailContainer = (props) => {
     const [product, setProduct] = useState()
-    const [loading, setLoading] = useState(true)
     const { productId } = useParams()
+    const [ loading, setLoading ] = useState(true)
 
 
     useEffect(() => {
         getProductById(productId).then(response => {
-            setProduct(response)
+        setProduct(response);
         }).finally(() => {
-            setLoading(false)
-        })
+            setLoading(false);
+        });
     }, [productId])
 
     if(loading) {
-        return <h5>CARGANDO PRODUCTOS</h5>
+        return (
+            <div>
+                <img src={props.src} className={props.className} alt={props.alt}/>
+                <h3 className="Title">CARGANDO PRODUCTOS.....</h3>
+            </div>
+        )
     }
 
-    return(
+    return (
         <div>
-            <ItemDetail {...product} addItem={addItem}/>
+            <ItemDetail {...product} />
         </div>
     )
 }
 
-
-export default ItemDetailContainer
+export default ItemDetailContainer;

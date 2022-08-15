@@ -30,12 +30,12 @@ const ItemListContainer = ({ greeting }) => {
     }
 
     if(products.length === 0) {
-        return categoryId ? <h4>NO HAY PRODUCTOS DE ESTA CATEGORIA {categoryId}</h4> : <h4>NO TENEMOS DISPONIBILIDAD DE ESTE PRODUCTO</h4>
+        return categoryId ? <h3>NO HAY PRODUCTOS DE ESTA CATEGORIA {categoryId}</h3> : <h4>NO TENEMOS DISPONIBILIDAD DE ESTE PRODUCTO</h4>
     }
 
     return (
         <>
-            <h1>{`${greeting} ${categoryId || ''}`}</h1>
+            <h2>{`${greeting} ${categoryId || ''}`}</h2>
             <ItemList products={products} />
         </>
     )
