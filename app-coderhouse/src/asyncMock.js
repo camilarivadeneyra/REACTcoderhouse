@@ -11,7 +11,7 @@ const products = [
 
     {
         id: '2',
-        name: 'VELA DE SOJA',
+        name: 'VELAS DE SOJA',
         price: '980',
         category: 'aromaterapia',
         img: 'https://chufasustentable.com/1620-medium_default/vela-de-soja-caixa-madera.jpg',
@@ -21,7 +21,7 @@ const products = [
 
     {
         id: '3',
-        name: 'CEPILLO DE DIENTES',
+        name: 'CEPILLOS DE DIENTES',
         price: '310',
         category: 'cuidadopersonal',
         img: 'https://chufasustentable.com/1951-medium_default/cepillos-de-dientes-meraki.jpg',

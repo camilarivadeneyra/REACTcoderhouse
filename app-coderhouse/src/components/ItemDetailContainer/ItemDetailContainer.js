@@ -21,8 +21,8 @@ const ItemDetailContainer = (props) => {
     if(loading) {
         return (
             <div>
-                <img src={props.src} className={props.className} alt={props.alt}/>
-                <h3 className="Title">CARGANDO PRODUCTOS.....</h3>
+                <img src={props.src} alt={props.alt}/>
+                <h3>CARGANDO PRODUCTOS.....</h3>
             </div>
         )
     }
