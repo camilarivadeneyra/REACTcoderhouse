@@ -35,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
 
 
     if(loading) {
-        return <h5>CARGANDO PRODUCTOS</h5>
+        return <h5>CARGANDO PRODUCTOS</h5>   
     }
 
     if(products.length === 0) {
