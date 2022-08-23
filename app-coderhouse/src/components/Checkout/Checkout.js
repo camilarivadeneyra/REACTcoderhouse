@@ -7,99 +7,83 @@ import { db } from '../../service/firebase/index'
 
 
 const Checkout = () => {
-    const [ order, purchasedOrder ] = useState (0)
-    const { cart, clearCart, total } = useContext (CartContext)
-    const [ ordenNumber, setOrderNumber, name, setName, mail, setMail ] = useState ("");
+    const { cart, clearCart, getTotal } = useContext ( CartContext )
+    const [ name, setName ] = useState ("");
     const [ phone, setPhone ] = useState (0);
+    const [ mail, setMail ] = useState ("");
 
-    if (order === 1) {
-        return (
-            <div>
-                <h3> {name}, GRACIAS POR COMPRAR EN TERRA !</h3>
-                <h4> El número de orden de tu compra es #{ordenNumber} </h4>
-            </div>
-        )
-    }
-
-
-    const command = async () => {
-        try {
-            const commandDetail = {
-                buyer: {
+    const generate = async () => {
+        try{
+    
+            const order = {
+                buyer:{
                     name: name,
                     phone: phone,
-                    email: mail,
+                    emai: mail
                 },
-                items: cart,
-                total: `${total}`,
-                date: Timestamp.fromDate (new Date())
+                items:cart,
+                date: Timestamp.fromDate(new Date()),
+                total: getTotal()
             }
 
-            console.log (commandDetail);
+        const productsids = cart.map (prod => prod.id)
+        const productRef = collection (db,'products')
+        const productsAddFire = await getDocs (query(productRef, where(documentId(),'in',productsids)))
+        const {docs} = productsAddFire
+        const noStock = []
+        const batch = writeBatch(db)
 
-
-            const information = cart.map (prod => prod.id)
-            const prodInf = collection (db, 'products')
-            const prodAddedFirebase = await getDocs (query (prodInf, where (documentId(), 'in', information )))
-            const { docs } = prodAddedFirebase
-            const noStock = []
-            const batch = writeBatch (db)
-
-            docs.forEach (doc => {
-                const infoDoc = doc.data()
-                const stockDb = infoDoc.stock
-
-                const productAdded = cart.find ( prod => prod.id === doc.id )
-                const prodQ = productAdded?.quantity
-
-                console.log (productAdded);
-                console.log (prodQ);
-
-                if (stockDb >= prodQ) {
-                    batch.update (doc.ref, {stock: stockDb - prodQ})
+        docs.forEach (doc => { 
+            const docData = doc.data()
+            const dbStock = docData.stock
+            const prodAdded = cart.find (prod => prod.id === doc.id)
+            const productQuantity = prodAdded?.quantity
+        
+                if (dbStock >= productQuantity){
+                batch.update (doc.ref, { stock: dbStock - productQuantity })
                 } else {
-                    noStock.push ({ id: doc.id, ...infoDoc })
+                    noStock.push ({ id: doc.id, ...docData })
                 }
-            })
+        })
+
+    
+        if( noStock.length === 0 ) {
+            const OrderRef = collection (db, 'orders')
+            const orderAdded =  addDoc (OrderRef, order)
+            batch.commit()
+            console.log (orderAdded.id)
+            clearCart()
+        } else {
+            console.log ('Estos productos se encuentran fuera de stock')
+        }
 
 
-            if (noStock.length === 0) {
-                const orderRef = collection (db, 'orders')
-                const orderCreated = await addDoc (orderRef, commandDetail)
-                batch.commit ()
-                console.log (orderCreated.id);
-                clearCart ()
-                setOrderNumber (orderCreated.id);
-                purchasedOrder (1)
-            } else {
-                console.log ('ALGUNOS PRODUCTOS ESTAN FUERA DE STOCK')
-            }
-        } catch (error) {
-            console.log (error);
-        } finally {
-            console.log ('SE DEJO DE EJECUTAR LA FUNCION')
+        } catch(error) {
+        }finally {   
+        console.log ('termino la ejecucion')
         }
     }
 
 
-    return (
+    return(
         <div>
-            <h4> TE AYUDAMOS A LLEVAR UNA VIDA MAS SUSTENTABLE </h4>
+            <h3>COMPLETE SUS DATOS</h3>
             <form>
-                <label> NOMBRE:
-                    <input type = "text" onChange = {(e) => {setName (e.target.value);}} />    
+                <label> NOMBRE 
+                    <input type="text" onChange={(e) => {setName (e.target.value); }}/>
                 </label>
-                <label> CORREO ELECTRONICO:
-                    <input type = "text" onChange = {(e) => {setMail (e.target.value);}} />
+                <label> CORREO ELECTRONICO
+                    <input type="text" onChange={(e) => {setMail (e.target.value); }}/>
                 </label>
-                <label> TELEFONO:
-                    <input type = "number" onChange = {(e) => {setPhone (e.target.value); }} />
+                <label> NUMERO DE TELEFONO
+                    <input type="number" onChange={(e) => {setPhone (e.target.value); }}/>
                 </label>
             </form>
-            <button type = "submit" onClick = {command}> COMPRAR </button>
+            <button onClick = {generate}>COMPRAR</button>
         </div>
     )
 }
+
 
 
 export default Checkout

@@ -5,7 +5,6 @@ import { CartContext } from '../../context/CartContext'
 
 const CartWidget = () => {
     const { getQuantity } = useContext(CartContext)
-
     const quantity = getQuantity()
 
     return(

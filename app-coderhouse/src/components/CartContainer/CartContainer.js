@@ -19,13 +19,15 @@ const CartContainer = () => {
 
 
     return (
-        <div>
-            <h3>TUS PRODUCTOS</h3>
-            { cart.map(p => <CartItem key={p.id} {...p}/>) }
-            <h5>TOTAL: ${total}</h5>
-            <button onClick={() => clearCart()}>VACIAR CARRITO</button>
-            <Link to='/checkout'>CHECKOUT</Link>
-        </div>
+        <>
+            <div> <h3>TUS PRODUCTOS</h3> </div>
+            <div>
+                <button  onClick={() => clearCart()} >VACIAR CARRITO</button>
+                { cart.map (p => <CartItem key = {p.id} {...p}/>) }
+                <h5>TOTAL: ${total}</h5>
+                <button><Link to ='/checkout'> GENERAR ORDEN </Link></button>
+            </div>
+        </>
     )
 }
 
