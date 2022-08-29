@@ -9,7 +9,7 @@ const Notification = ({ message, severity, classes }) => {
         right: 8,
         widht: 'auto',
         height: 'auto',
-        padding: '8px 18px 8px 18px',
+        padding: '6px 16px 6px 16px',
         color: 'black',
         backgroundColor: severity === 'success' ? 'green' : 'red'
     }

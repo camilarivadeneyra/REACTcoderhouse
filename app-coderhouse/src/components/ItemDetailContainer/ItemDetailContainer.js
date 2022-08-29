@@ -26,14 +26,14 @@ const ItemDetailContainer = ({ addItem }) => {
     if(loading) {
         return (
             <div>
-                <h3>CARGANDO PRODUCTOS.....</h3>
+                <h3 className='loading'>Cargando productos ...</h3>
             </div>
         )
     }
 
     return (
         <div>
-            <ItemDetail {...product} addItem={addItem} />
+            <ItemDetail {...product} addItem={addItem} className = 'detail' />
         </div>
     )
 }

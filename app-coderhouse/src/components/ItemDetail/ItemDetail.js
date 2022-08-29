@@ -15,7 +15,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const handleOnAdd = (quantity) => {
         console.log('agregue producto al carrito')
         console.log(quantity)
-        setNotification('error', `SE AGREGARON ${quantity} ${name}`)
+        setNotification('error', `Se agregaron al carrito ${quantity} ${name}`)
         setQuantity(quantity)
         addItem({id, name, price, quantity})
     }
@@ -23,18 +23,18 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     return (
         <article>
-            <header>
+            <header className = 'name'>
                 <h3>{name}</h3>
             </header>
-            <picture>
+            <picture className = 'picture'>
                 <img src={img} alt={name}/>
             </picture>
-            <section>
-                <p> Categoria: {category}</p>
-                <p> Descripción: {description}</p>
-                <p> Precio: {price}</p>
+            <section className = 'information'>
+                <p> CATEGORIA: {category}</p>
+                <p> DESCRIPCION: {description}</p>
+                <p> PRECIO: {price}</p>
             </section>           
-            <footer>
+            <footer className = 'footer'>
                 { quantity > 0  
                     ? <Link to='/cart'>FINALIZAR COMPRA</Link> 
                     : <ItemCount stock={stock} onAdd={handleOnAdd} initial={quantityAdded}/>}

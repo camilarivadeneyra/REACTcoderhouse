@@ -1,1 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
+
+:root {
+    background-color: white;
+    color: black;
+    --font-primary: 'Dosis', sans-serif;
+    --font-secondary: 'Amatic SC', cursive;
+    --font-tertiary: 'Gloria Hallelujah', cursive;
+}
+
+.loading {
+    font-family: var(--font-tertiary);
+    font-size: 20px;
+}
+
+.dont {
+    font-family: var(--font-secondary);
+    font-size: 22px;
+}
+
+.itemList {
+    font-family: var(--font-tertiary);
+    font-size: 26px;
+    padding-left: 22%;
+}

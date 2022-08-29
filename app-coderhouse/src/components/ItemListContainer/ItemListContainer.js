@@ -11,7 +11,6 @@ const ItemListContainer = ({ greeting }) => {
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
 
-
     useEffect(() => {
         setLoading(true)
 
@@ -35,17 +34,17 @@ const ItemListContainer = ({ greeting }) => {
 
 
     if(loading) {
-        return <h5>CARGANDO PRODUCTOS</h5>   
+        return <h5 className='loading' >Cargando productos ....</h5>   
     }
 
     if(products.length === 0) {
-        return categoryId ? <h3>NO HAY PRODUCTOS DE ESTA CATEGORIA {categoryId}</h3> : <h4>NO TENEMOS DISPONIBILIDAD DE ESTE PRODUCTO</h4>
+        return categoryId ? <h4 className='dont' >NO HAY PRODUCTOS DE ESTA CATEGORIA {categoryId}</h4> : <h4 className='dont' >NO TENEMOS DISPONIBILIDAD DE ESTE PRODUCTO</h4>
     }
 
     return (
         <>
-            <h2>{`${greeting} ${categoryId || ''}`}</h2>
-            <ItemList products={products} />
+            <h2 className='itemList' >{`${greeting} ${categoryId || ''}`}</h2>
+            <ItemList products={products} className='listProduct' />
         </>
     )
 }

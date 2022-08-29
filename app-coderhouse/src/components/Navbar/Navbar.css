@@ -1,12 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
 
-.Navbar {
-    display: flex;
+:root {
+    background-color: white;
+    color: black;
+    --font-primary: 'Dosis', sans-serif;
+    --font-secondary: 'Amatic SC', cursive;
+    --font-tertiary: 'Gloria Hallelujah', cursive;
 }
 
-.Categories {
+
+.Navegation {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    margin-left: 8%;
+    margin-left: 0%;
+    
 }
+
+.Category {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    font-family: var(--font-primary);
+    font-size: 18px;
+}
+
+

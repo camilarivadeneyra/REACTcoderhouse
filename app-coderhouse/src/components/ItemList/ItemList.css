@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
 
+:root {
+    background-color: white;
+    color: black;
+    --font-primary: 'Dosis', sans-serif;
+    --font-secondary: 'Amatic SC', cursive;
+    --font-tertiary: 'Gloria Hallelujah', cursive;
+}
 
-.ItemList {
+.id {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 20px;
 }

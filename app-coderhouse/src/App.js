@@ -8,7 +8,6 @@ import { NotificationProvider} from './notification/Notification'
 import CartContainer from './components/CartContainer/CartContainer'
 import Checkout from './components/Checkout/Checkout';
 
-
 function App() {
   return (
     <div>
@@ -17,7 +16,7 @@ function App() {
           <BrowserRouter>
             <Navbar />
             <Routes>
-              <Route path='/' element={<ItemListContainer greeting="SOMOS LO QUE NOS MUEVE A SER PARTE DEL CAMBIO" />}/>
+              <Route path='/' element={<ItemListContainer greeting="Somos lo que nos mueve a ser parte del cambio ! ♻"/>}/>
               <Route path='/category/:categoryId' element={<ItemListContainer greeting="Somos un Univero infinito! El equilibrio y el caos. Somos la Tierra!" />} />
               <Route path='/detail/:productId' element={<ItemDetailContainer />} />
               <Route path='/cart' element={<CartContainer/>} />
@@ -29,5 +28,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
