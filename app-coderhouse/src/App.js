@@ -8,9 +8,9 @@ import { NotificationProvider} from './notification/Notification'
 import CartContainer from './components/CartContainer/CartContainer'
 import Checkout from './components/Checkout/Checkout';
 
-function App() {
+function Terra() {
   return (
-    <div>
+    <div className='app'>
       <NotificationProvider>
         <CartContextProvider>
           <BrowserRouter>
@@ -30,4 +30,4 @@ function App() {
 }
 
 
-export default App;
+export default Terra;

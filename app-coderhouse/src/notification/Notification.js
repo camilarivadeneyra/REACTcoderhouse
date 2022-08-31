@@ -1,50 +1,52 @@
+import "./Notification.css"
 import { useState, createContext } from 'react'
 
 
 const Notification = ({ message, severity, classes }) => {
 
-    const notificationStyles = {
+    const notificationCss = {
         position: 'absolute',
         top: 100,
         right: 8,
         widht: 'auto',
         height: 'auto',
-        padding: '6px 16px 6px 16px',
-        color: 'black',
-        backgroundColor: severity === 'success' ? 'green' : 'red'
+        padding: '8px 16px 8px 16px',
+        color: "white",
+        backgroundColor: severity === 'success' ? 'black' : 'black'
     }
 
 
-    if(message === '') return 
+    if( message === '' ) return 
 
     const config = true ? {
-        className: `unaClase ${classes || ''}`,
-        style:notificationStyles
+        className: `Class ${classes || ''}`,
+        style: notificationCss
     } : {}
 
     return (
-        <div {...config}>{message}</div>
+        <div {...config}> {message} </div>
     )
 }
 
-const NotificationContext = createContext()
+
+const NotificationContext = createContext ()
 
 export const NotificationProvider = ({ children }) => {
-    const [message, setMessage] = useState('')
-    const [severity, setSeverity] = useState('success')
+    const [message, setMessage] = useState ('')
+    const [severity, setSeverity] = useState ('success')
 
     const setNotification = (sev, msg, time = 3) => {
-        setMessage(msg)
-        setSeverity(sev)
-        setTimeout(() => {
-            setMessage('')
-        }, time * 1000)
+        setMessage (msg)
+        setSeverity (sev)
+        setTimeout (() => {
+            setMessage ('')
+        }, time * 500)
     } 
 
 
     return (
         <NotificationContext.Provider value={{ setNotification }}>
-            <Notification message={message} severity={severity} classes={'otraClase'}/>
+            <Notification message={message} severity={severity} classes={'otherClass'}/>
             { children }
         </NotificationContext.Provider>
     )

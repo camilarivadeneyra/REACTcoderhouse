@@ -26,4 +26,18 @@
     font-size: 18px;
 }
 
+.Option {
+    display: inline;
+    justify-content: right;
+    padding: 20%;
+    text-decoration: none;
+    list-style: none;
+}
 
+.ActiveOption {
+    display: inline;
+    justify-content: right;
+    padding: 36px;
+    text-decoration: none;
+    list-style: none;
+}

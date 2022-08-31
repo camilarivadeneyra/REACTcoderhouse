@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom'
 const NavBar = () => {
     return (
         <nav className= "Navegation" >
-            <Link to='/'>
+            <Link to='/' >
                 <img alt='logoterra' src='../LOGO.png' />
             </Link>
             <div className='Category'>

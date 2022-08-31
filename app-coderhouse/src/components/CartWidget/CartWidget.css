@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
-.Cart{
-    max-width: 30px;
+div {
+    display: inline;
 }
+
+.cart {
+    color: black;
+    width: 50px;
+}
+
+.widget {
+    padding-left: 8px;
+    text-decoration: none;
+    list-style: none ;
+}
+
+.qu {
+    padding-left: 12px;
+}
+

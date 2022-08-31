@@ -8,29 +8,7 @@
     --font-tertiary: 'Gloria Hallelujah', cursive;
 }
 
-.picture {
-    padding-left: 20px;
-    height: 500px;
-    width: 500px;
-}
 
-.cardDetail1 {
+notificationCss {
     font-family: var(--font-secondary);
-    font-size: 26px;
-}
-
-.cardDetail {
-    font-family: var(--font-secondary);
-    font-size: 22px;
-}
-
-.footer {
-    font-family: var(--font-secondary);
-    font-size: 22px;
-}
-
-.end {
-    font-family: var(--font-tertiary);
-    font-size: 18px;
-    text-decoration: none;
 }

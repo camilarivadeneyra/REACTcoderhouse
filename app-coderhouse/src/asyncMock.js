@@ -1,7 +1,7 @@
 const products = [
     {
         id: '1',
-        name: 'PEINES CON MANGO',
+        name: 'PEINE CON MANGO',
         price: '1050',
         category: 'cuidadocapilar',
         img: 'https://i0.wp.com/chufasustentable.com/wp-content/uploads/2022/02/peine.jpg?fit=708%2C835&ssl=1',
