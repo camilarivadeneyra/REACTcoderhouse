@@ -8,3 +8,8 @@
     --font-tertiary: 'Gloria Hallelujah', cursive;
 }
 
+.not {
+    font-family: var(--font-tertiary);
+    font-size: 20px;
+    text-align: center;
+}

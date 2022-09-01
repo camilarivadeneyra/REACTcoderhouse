@@ -2,33 +2,39 @@
 
 .infProd {
     display: flex;
-    max-width: 1100px;
-    margin: 0;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .card {
     width: 20rem;
 	margin: 20px;
-	border-radius: 6px;
-	max-width: 1100px;
+	border-radius: 4px;
+	max-width: 1000px;
 	overflow: hidden;
 	background:#fff;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.87);
+	box-shadow: 0px 1px 8px rgba(0,0,0,0.87);
 	cursor: default;
 }
 
 .card:hover{
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+	transform: translateY(-2%);
 }
 
 .cardContainer {
     text-align: center;
 }
 
-.option {
+.OptionDe {
+    padding-left: 50px;
+} 
+
+.optionD {
+    padding-left: 191px;
     cursor: pointer;
     list-style: none;
     text-decoration: none;
