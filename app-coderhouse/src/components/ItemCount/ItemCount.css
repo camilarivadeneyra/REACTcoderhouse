@@ -18,3 +18,7 @@
     background-color: black;
     color: white;
 }
+
+.btnBuy {
+    display: inline;
+}

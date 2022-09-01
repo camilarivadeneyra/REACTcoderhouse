@@ -1,18 +1,57 @@
-## Bienvenidos a T E R R A.
+# Bienvenidos a TERRA ♻
 
-Somos una tienda natural. Nuestro deseo es volver a nuestras raices, recuperar costumbres ancestrales. Cuidarnos, cuidar al otro, cuidar el planeta.
-Ser conscientes y activos.
+Proyecto creado en el curso de React JS.
 
-Somos lo que sentimos, lo que pensamos, lo que decimos y lo que callamos! Somos un universo infinito. El equilibrio y el caos. Somos agua, aire, tierra y fuego. 
-No somo habitantes de la tierra, somos la Tierra!
-SOMOS LO QUE NOS MUEVE A SER PARTE DEL CAMBIO
+
+## Pasos a seguir para ejectutar el proyecto. 
+
+En una nueva carpeta ⬇
+````
+$ git clone 
+$ cd app-coderhouse
+$ npm install
+$ npm start 
+````
+
+Podes abrir la app directamente ⬇
+link
+
+Clonar el repositorio ⬇
+- git clone odsncj
+- cd app.coderhouse
+- npm install
+- npm start
 
 
 -------
 
+## Componentes creados.
 
-Proyecto creado en el curso de React JS. Para poder replicar la aplicacion debemos contar con un editor de codigos y NodeJs en nuestra computadora. En esta aplicacion incluimos librerias, como Node.Js & npm React para la creacion de la misma. React Router Dom para incluir las rutas.
-Creamos tambien un mapa a traves de la carpeta llamada Components, dentro de ella figura cada elemento de nuestra aplicacion.
+- Navbar : corresponde a la barra de navegacion de nuestra aplicacioón.
+- ItemListContainer: es el contenedor de ItemList
+- ItemList: 
+- ItemDetailContainer: es el contenedor de ItemDetail
+- ItemDetail: nos muestra información detallada del producto.
+- ItemCount: nos permite seleccionar la cantidad elegida del producto.
+- Item: muestra la tarjeta del producto.
+- Checkout: nos permite ingresar nuestros datos al momento de realizar la compra.
+- CartWidget: es el carrito de compras, muestra los productos seleccionados y sus cantidades.
+- CartItem: nos muestra información sobre nuestra compra.
+- CartContainer: nos avisa si agregamos productos, en el caso de que no nos redirecciona al menú.
 
 
+
+-------
+
+## Rutas.
+Llamamos las rutas mediante React Router Dom.
+
+
+## TERRA ⬇
+
+Somos una tienda natural. Nuestro deseo es volver a nuestra raices, cuidarnos, cuidar al otro, cuidar el planeta.
+Ser conscientes y activos.
+Somos lo que sentimos, lo que pensamos. Somos un universo infinito! El equilibrio y el caos. 
+Somos agua, aire, tierra y fuego! No somos habitantes de la tierra, somos la Tierra! 
+SOMOS LO QUE NOS MUEVE A SER PARTE DEL CAMBIO.
 

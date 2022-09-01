@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
+
+:root {
+    background-color: white;
+    color: black;
+    --font-primary: 'Dosis', sans-serif;
+    --font-secondary: 'Amatic SC', cursive;
+    --font-tertiary: 'Gloria Hallelujah', cursive;
+}
+
+
+.cartDetail {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.cartInf {
+    display: inline;
+    flex-grow: 2;
+}
+
+.cartName {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    margin: 0;
+}
+
+.cartQu {
+    font-family: var(--font-primary);
+    font-size: 15px ;
+}
+
+.cartPrice {
+    line-height: 2;
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.optionBtn {
+    align-self: flex-end;
+    flex-grow: 0.3;
+}
