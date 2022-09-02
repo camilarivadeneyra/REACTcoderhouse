@@ -4,13 +4,13 @@ import { useState, createContext } from 'react'
 
 const Notification = ({ message, severity, classes }) => {
 
-    const notificationCss = {
+    const notificationCss  = {
         position: 'absolute',
         top: 100,
         right: 8,
         widht: 'auto',
         height: 'auto',
-        padding: '8px 16px 8px 16px',
+        padding: '10px 12px 10px 12px',
         color: "white",
         backgroundColor: severity === 'success' ? 'black' : 'black'
     }

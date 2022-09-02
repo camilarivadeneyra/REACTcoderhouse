@@ -66,15 +66,19 @@ const Checkout = () => {
 
 
     return(
-        <div className="formInformation">
-            <form>
-                <h3 className="title"> INGRESE SUS DATOS: </h3>
+        <div>
+            <br>
+            </br>
+            <form className="formInformation">
+                <h3 className="title"> INGRESE SUS DATOS </h3>
                 <label> NOMBRE
                     <input type = "text" placeholder = "Ingresa tu nombre completo" onChange = { (e) => { setName (e.target.value); }} />
                 </label>
+                <br />
                 <label> CORREO ELECTRONICO
                     <input type = "text" placeholder = "Ingresa tu e-mail" onChange = { (e) => { setMail (e.target.value); }} />
                 </label>
+                <br />
                 <label> TELEFONO
                     <input type = "text" placeholder = "Ingresa tu número de telefono " onChange = { (e) => { setPhone (e.target.value); }}/>
                 </label>

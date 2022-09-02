@@ -38,5 +38,7 @@
 .end {
     font-family: var(--font-tertiary);
     font-size: 18px;
+    list-style: none;
     text-decoration: none;
+    color: inherit;
 }

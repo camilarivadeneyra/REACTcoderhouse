@@ -12,21 +12,23 @@ import { NotificationProvider} from './notification/Notification'
 function Terra() {
   return (
     <div className='app'>
-      <NotificationProvider>
-        <CartContextProvider>
-          <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route path='/' element = {<ItemListContainer greeting="Somos lo que nos mueve a ser parte del cambio ! ♻"/>}/>
-              <Route path='/category/:categoryId' element = {<ItemListContainer greeting="Somos un Univero infinito! El equilibrio y el caos. Somos la Tierra!" />} />
-              <Route path='/detail/:productId' element = {<ItemDetailContainer />} />
-              <Route path='/cart' element = {<CartContainer/>} />
-              <Route path='/Checkout' element = {<Checkout/>}/>
-              <Route path='*' element = {<h3 className = "not" > 🚫 PAGE NOT FOUND </h3>} />
-            </Routes>
+      <section className = 'headerTerra'>
+        <NotificationProvider>
+          <CartContextProvider>
+            <BrowserRouter>
+              <Navbar />
+              <Routes>
+                <Route path='/' element = {<ItemListContainer greeting="Somos lo que nos mueve a ser parte del cambio ! ♻"/>}/>
+                <Route path='/category/:categoryId' element = {<ItemListContainer greeting="Somos un Univero infinito! El equilibrio y el caos. Somos la Tierra!" />} />
+                <Route path='/detail/:productId' element = {<ItemDetailContainer />} />
+                <Route path='/cart' element = {<CartContainer/>} />
+                <Route path='/Checkout' element = {<Checkout/>}/>
+                <Route path='*' element = {<h3 className = "not" > 🚫 PAGE NOT FOUND </h3>} />
+              </Routes>
             </BrowserRouter>
-        </CartContextProvider>
-      </NotificationProvider>
+          </CartContextProvider>
+        </NotificationProvider>
+      </section>
     </div>
   );
 }

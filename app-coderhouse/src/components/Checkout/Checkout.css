@@ -9,42 +9,41 @@
 }
 
 .formInformation {
-    width: 500px;
-    height: 600px;
-    box-shadow: 0 0 38px -10px #000;
-    margin: calc (30vh - 220px) auto; 
-    padding: 20px 30px;
-    box-sizing: border-box;
-    position: relative;
+    width: 90%;
+    margin: 6% 4%;
 }
 
 .title {
-    margin: 10px 0;
-    padding-bottom: 10px;
-    width: 180px;
-    color: #000;
-    border-bottom: 3px solid black;
+    font-family: var(--font-secondary);
+    font-size: 28px;
+    justify-self: center;
+    width: 45%;
+    border-bottom: 2px solid black;
+}
+
+label {
+    font-family: var(--font-secondary);
+    font-size: 18px;
 }
 
 input {
+    font-family: var(--font-primary);
+    font-size: 18px;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background: none;
-    outline: none;
-    resize: none;
     border: 0;
     transition: all .3s;
     border-bottom: 2px solid grey;
 }
 
 .bttGenerate{
+    font-family: var(--font-secondary);
+    font-size: 20px;
     float: right;
-    padding: 8px 12px;
+    padding: 12px 12px;
     margin: 8px 0 0;
     border: 2px solid gray;
-    background: 0;
-    color: #000;
     cursor: pointer;
     transition: all .3s;
 }
@@ -52,4 +51,5 @@ input {
 .bttGenerate:hover{
     background: gray;
     color: #fff;
+    font-size: 22px;
 }

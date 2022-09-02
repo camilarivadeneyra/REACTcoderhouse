@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
-.infProd {
+.section {
     display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 0px;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: row;
+
 }
 
 .card {
@@ -33,13 +30,14 @@
     padding-left: 50px;
 } 
 
-.optionD {
-    padding-left: 191px;
+.option {
+    padding-left: 200px;
     cursor: pointer;
     list-style: none;
     text-decoration: none;
-    font-family: var(--font-tertiary);
-    font-size: 18px;
+    color: inherit;
+    font-family: var(--font-secondary);
+    font-size: 22px;
 
 }
 

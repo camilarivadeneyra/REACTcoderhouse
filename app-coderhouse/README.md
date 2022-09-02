@@ -1,35 +1,26 @@
 # Bienvenidos a TERRA ♻
 
-Proyecto creado en el curso de React JS.
+Proyecto creado en el curso de React JS. 
+Armamos una Single Page Application, que simula ser un E-commerse de una tienda natural. Podes visualizar los productos, agregarlos al carrito y ver la cantidad y el total correspondiente de la compra. Para poder realizarla debemos completar un formulario.
 
 
 ## Pasos a seguir para ejectutar el proyecto. 
 
-En una nueva carpeta ⬇
-````
-$ git clone 
-$ cd app-coderhouse
-$ npm install
-$ npm start 
-````
-
-Podes abrir la app directamente ⬇
-link
-
 Clonar el repositorio ⬇
-- git clone odsncj
-- cd app.coderhouse
-- npm install
-- npm start
+- git clone https://github.com/camilarivadeneyra/REACTcoderhouse
+- cd app-coderhouse
+- npm install 
+- npm run start
 
 
--------
+````
+
 
 ## Componentes creados.
 
 - Navbar : corresponde a la barra de navegacion de nuestra aplicacioón.
 - ItemListContainer: es el contenedor de ItemList
-- ItemList: 
+- ItemList: este contendenor es el encargado de transformar el codigo obtenido y volverlo legible para el contenedor Item
 - ItemDetailContainer: es el contenedor de ItemDetail
 - ItemDetail: nos muestra información detallada del producto.
 - ItemCount: nos permite seleccionar la cantidad elegida del producto.
@@ -37,7 +28,7 @@ Clonar el repositorio ⬇
 - Checkout: nos permite ingresar nuestros datos al momento de realizar la compra.
 - CartWidget: es el carrito de compras, muestra los productos seleccionados y sus cantidades.
 - CartItem: nos muestra información sobre nuestra compra.
-- CartContainer: nos avisa si agregamos productos, en el caso de que no nos redirecciona al menú.
+- CartContainer: nos muestra si agregamos productos, en el caso de que no, nos redirecciona al menú.
 
 
 

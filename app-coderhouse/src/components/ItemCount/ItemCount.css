@@ -19,6 +19,15 @@
     color: white;
 }
 
+
+.number {
+    text-align: center;
+}
+
 .btnBuy {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    width: 4%;
+    padding-left: 12px;
+    align-items: center;
 }
