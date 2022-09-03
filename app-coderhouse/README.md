@@ -46,3 +46,8 @@ Somos lo que sentimos, lo que pensamos. Somos un universo infinito! El equilibri
 Somos agua, aire, tierra y fuego! No somos habitantes de la tierra, somos la Tierra! 
 SOMOS LO QUE NOS MUEVE A SER PARTE DEL CAMBIO.
 
+
+-------
+Comparto el Link donde se ve el funcionamiento de la página. 
+
+https://drive.google.com/file/d/1JwlwH8AiydNQpqx4wUgWFb74BpTmfRA0/view?usp=sharing
