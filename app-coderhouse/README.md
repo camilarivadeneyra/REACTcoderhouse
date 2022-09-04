@@ -18,16 +18,26 @@ Clonar el repositorio ⬇
 
 ## Componentes creados.
 
-- Navbar : corresponde a la barra de navegacion de nuestra aplicacioón.
-- ItemListContainer: es el contenedor de ItemList
-- ItemList: este contendenor es el encargado de transformar el codigo obtenido y volverlo legible para el contenedor Item
-- ItemDetailContainer: es el contenedor de ItemDetail
+- Navbar : corresponde a la barra de navegacion de nuestra aplicación.
+
+- ItemListContainer: es el contenedor de ItemList.
+
+- ItemList: este contendenor es el encargado de transformar el codigo obtenido y volverlo legible para el contenedor Item.
+
+- ItemDetailContainer: es el contenedor de ItemDetail.
+
 - ItemDetail: nos muestra información detallada del producto.
+
 - ItemCount: nos permite seleccionar la cantidad elegida del producto.
+
 - Item: muestra la tarjeta del producto.
+
 - Checkout: nos permite ingresar nuestros datos al momento de realizar la compra.
+
 - CartWidget: es el carrito de compras, muestra los productos seleccionados y sus cantidades.
+
 - CartItem: nos muestra información sobre nuestra compra.
+
 - CartContainer: nos muestra si agregamos productos, en el caso de que no, nos redirecciona al menú.
 
 

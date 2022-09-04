@@ -25,7 +25,7 @@ const CartContainer = () => {
 
     return (
         <>
-            <h3 className = 'item'>TUS PRODUCTOS</h3> 
+            <h3 className = 'item'>TUS PRODUCTOS  🛒</h3> 
             <div className = 'itemCart'>
                 <button  onClick = {() => clearCart ()} className = 'cleanUp' >VACIAR CARRITO</button>
                 { cart.map (p => <CartItem key = {p.id} {...p}/>) }

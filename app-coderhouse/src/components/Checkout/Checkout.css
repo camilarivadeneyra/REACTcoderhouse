@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
 
 :root {
     background-color: white;
     color: black;
     --font-primary: 'Dosis', sans-serif;
     --font-secondary: 'Amatic SC', cursive;
-    --font-tertiary: 'Gloria Hallelujah', cursive;
+    --font-tertiary: 'Barrio', cursive;
 }
 
 .formInformation {
@@ -14,7 +15,7 @@
 }
 
 .title {
-    font-family: var(--font-secondary);
+    font-family: var(--font-tertiary);
     font-size: 28px;
     justify-self: center;
     width: 45%;
@@ -28,7 +29,7 @@ label {
 
 input {
     font-family: var(--font-primary);
-    font-size: 18px;
+    font-size: 12px;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -38,8 +39,8 @@ input {
 }
 
 .bttGenerate{
-    font-family: var(--font-secondary);
-    font-size: 20px;
+    font-family: var(--font-tertiary);
+    font-size: 22px;
     float: right;
     padding: 12px 12px;
     margin: 8px 0 0;

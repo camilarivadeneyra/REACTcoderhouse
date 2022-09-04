@@ -1,14 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
 
 :root {
     background-color: white;
     color: black;
     --font-primary: 'Dosis', sans-serif;
     --font-secondary: 'Amatic SC', cursive;
-    --font-tertiary: 'Gloria Hallelujah', cursive;
+    --font-tertiary: 'Barrio', cursive;
 }
 
 
 .detail {
     font-family: var(--font-secondary);
+}
+
+.loader {
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    background: currentColor;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+
+.loader::after, .loader::before {
+    content: '';
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background: currentColor;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    box-sizing: border-box;
+    animation: animloader 0.3s  0.45s  linear infinite alternate;
+}
+
+.loader::before {
+    left: -20px;
+    animation-delay: 0s;
 }

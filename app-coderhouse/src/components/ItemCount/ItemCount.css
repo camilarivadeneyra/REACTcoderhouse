@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
 
 :root {
     background-color: white;
     color: black;
     --font-primary: 'Dosis', sans-serif;
     --font-secondary: 'Amatic SC', cursive;
-    --font-tertiary: 'Gloria Hallelujah', cursive;
+    --font-tertiary: 'Barrio', cursive;
 }
 
 .cart {
     font-family: var(--font-tertiary);
+    font-weight: lighter;
 }
 
 .quantity {

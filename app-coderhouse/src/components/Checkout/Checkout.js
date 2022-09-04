@@ -72,15 +72,15 @@ const Checkout = () => {
             <form className="formInformation">
                 <h3 className="title"> INGRESE SUS DATOS </h3>
                 <label> NOMBRE
-                    <input type = "text" placeholder = "Ingresa tu nombre completo" onChange = { (e) => { setName (e.target.value); }} />
+                    <input type = "text" placeholder = "NOMBRE COMPLETO" onChange = { (e) => { setName (e.target.value); }} />
                 </label>
                 <br />
                 <label> CORREO ELECTRONICO
-                    <input type = "text" placeholder = "Ingresa tu e-mail" onChange = { (e) => { setMail (e.target.value); }} />
+                    <input type = "text" placeholder = "E-MAIL VALIDO" onChange = { (e) => { setMail (e.target.value); }} />
                 </label>
                 <br />
                 <label> TELEFONO
-                    <input type = "text" placeholder = "Ingresa tu número de telefono " onChange = { (e) => { setPhone (e.target.value); }}/>
+                    <input type = "text" placeholder = "NÚMERO DE TELEFONO" onChange = { (e) => { setPhone (e.target.value); }}/>
                 </label>
             </form>
             <button className = "bttGenerate" onClick = {generate}> COMPRAR </button>

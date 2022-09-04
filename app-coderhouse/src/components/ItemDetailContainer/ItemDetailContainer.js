@@ -26,7 +26,7 @@ const ItemDetailContainer = ({ addItem }) => {
     if(loading) {
         return (
             <div>
-                <h3 className='loading'>Cargando productos ...</h3>
+                <span class="loader"></span>
             </div>
         )
     }

@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
 
 :root {
     background-color: white;
     color: black;
     --font-primary: 'Dosis', sans-serif;
     --font-secondary: 'Amatic SC', cursive;
-    --font-tertiary: 'Gloria Hallelujah', cursive;
+    --font-tertiary: 'Barrio', cursive;
 }
 
 .card {
     width: 85%;
 }
-
 
 .picture {
     padding-left: 30px;
@@ -38,6 +39,7 @@
 .end {
     font-family: var(--font-tertiary);
     font-size: 18px;
+    font-weight: lighter;
     list-style: none;
     text-decoration: none;
     color: inherit;

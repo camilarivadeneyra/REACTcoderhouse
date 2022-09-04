@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+:root {
+    background-color: white;
+    color: black;
+    --font-primary: 'Dosis', sans-serif;
+    --font-secondary: 'Amatic SC', cursive;
+    --font-tertiary: 'Barrio', cursive;
+}
+
 
 div {
     display: inline;
